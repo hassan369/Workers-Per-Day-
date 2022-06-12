@@ -1,0 +1,86 @@
+/*
+book-grid and book-grid-large for images container
+book-cover and book-cover-large for image
+*/
+
+:root {
+  --book-cover-width: 200px;
+  --book-cover-width-large: 325px;
+  --book-cover-aspect-ratio: 0.75;
+  --color-btn-primary-text: hsl(var(--color-base-hue), 100%, 20%);
+}
+
+.ad-cover {
+  width: var(--book-cover-width);
+  height: calc(
+    var(--book-cover-width) / var(--book-cover-aspect-ratio)
+  ); /*200/0.75*/
+}
+
+.ad-cover-large {
+  --book-cover-width: var(--book-cover-width-large);
+}
+/*this will change cover-width from 200 to 325 and then change the height*/
+
+.ad-grid {
+  display: grid;
+  justify-content: center;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fill, var(--book-cover-width));
+  /*auto-fill will repeate untel width is full then wrap to next line,
+    and second parameter is the width of each column */
+}
+.ad-grid-large {
+  grid-template-columns: repeat(auto-fill, var(--book-cover-width-large));
+}
+
+.ad-details {
+  display: flex;
+  padding-bottom: 1rem;
+}
+
+/*right side of grid*/
+.ad-details-grid {
+  display: grid;
+  align-content: flex-start;
+  align-items: center;
+  grid-gap: 1rem;
+  grid-template-columns: auto auto;
+  margin-left: 2rem;
+}
+
+.ad-details-label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  align-items: flex-start;
+}
+
+/*left side of grid*/
+.ad-details-btn-grid {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  margin-top: 2rem;
+}
+
+.ad-details-button {
+  margin-left: 0.5rem;
+  width: auto;
+}
+
+.justify {
+  display: flex;
+  height: 250px;
+  width: 80%;
+  margin-top: 2rem;
+}
+
+.ad-grid-info-application a,
+.ad-grid-info-application p {
+  color: white;
+}
+
+.ad-grid-info-application .btn-primary {
+  color: var(--color-btn-primary-text);
+}

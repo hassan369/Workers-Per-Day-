@@ -1,0 +1,26 @@
+<h2 class="page-header">Search ads</h2>
+<form action="/ad" method="GET">
+  <div class="form-row">
+    <div class="form-item">
+      <label for="title">task</label>
+      <input type="text" name="task" value="<%= searchOptions.task %>" />
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-item">
+      <label>Location</label>
+      <input
+        type="text"
+        name="location"
+        value="<%= searchOptions.location %>"
+      />
+    </div>
+  </div>
+
+  <div class="form-row form-row-end">
+    <button class="btn btn-primary" type="submit">Search</button>
+  </div>
+</form>
+<br />
+<%- include('../partials/adgrid', { ads: ads, large:true }) %>

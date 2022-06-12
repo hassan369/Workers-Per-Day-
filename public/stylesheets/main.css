@@ -1,0 +1,88 @@
+@import 'shared/variables.css';
+@import 'shared/header.css';
+@import 'shared/buttons.css';
+@import 'shared/form.css';
+@import 'shared/ad.css';
+
+:root {
+  font-family: 'Varela Round', sans-serif;
+  font-size: 20px;
+  color: var(--color-text-light);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(
+    to right,
+    var(--color-background-dark),
+    var(--color-background-light)
+  );
+}
+
+.container {
+  max-width: 1200px; /*if screen bigger than 1200px wont expand*/
+  margin: auto; /*extra space go left and right equally*/
+  margin-bottom: 3rem;
+}
+
+.inner-container {
+  margin: 0 2rem;
+}
+
+.page-header {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.error-message {
+  color: hsl(var(--color-danger-hue), 100%, 50%);
+}
+
+.login-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.login-form {
+  flex-grow: 0.2;
+}
+
+.ad-grid-info {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 3rem;
+}
+
+.ad-grid-info > * {
+  margin-bottom: 10px;
+}
+
+.ad-grid-info a:first-of-type {
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.ad-grid-buttons {
+  display: flex;
+}
+.ad-grid-buttons a {
+  margin-right: 1rem;
+  color: black;
+}
+
+.user-details-btn-grid {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.user-details-btn-grid div:first-child {
+  margin-bottom: 1.2rem;
+}

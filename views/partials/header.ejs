@@ -1,0 +1,16 @@
+<header>
+  <nav class="header-nav">
+    <a class="header-title" href="/">Per Day Workers</a>
+    <ul>
+      <li><a href="/ad">all jobs</a></li>
+      <li><a href="/ad/new">add job</a></li>
+      <% if (userloged == '') { %>
+      <li><a href="/user/login">signin</a></li>
+      <% } else{ %>
+      <li>
+        <a href="/user/show %> "><%= userloged.name%></a>
+      </li>
+      <% } %>
+    </ul>
+  </nav>
+</header>

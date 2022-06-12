@@ -1,0 +1,30 @@
+<div class="form-row">
+  <div class="form-item">
+    <label>Task</label>
+    <input type="text" name="task" value="<%= ad.task %>" />
+  </div>
+</div>
+
+<!--2nd row-->
+<div class="form-row">
+  <div class="form-item">
+    <label>Location</label>
+    <input type="text" name="location" value="<%= ad.location %>" />
+  </div>
+  <div class="form-item">
+    <label>phone number</label>
+    <input type="number" name="phoneNumber" value="<%= ad.phoneNumber %>" />
+  </div>
+</div>
+
+<!--3rd row-->
+<div class="form-row">
+  <div class="form-item form-item-no-grow">
+    <label>image</label>
+    <input type="file" name="image" />
+  </div>
+  <div class="form-item">
+    <label>Description</label>
+    <textarea name="description"><%= ad.description %></textarea>
+  </div>
+</div>

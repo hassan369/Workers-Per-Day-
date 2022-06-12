@@ -1,0 +1,34 @@
+<h2 class="page-header"><%= ad.task %></h2>
+<div class="ad-details">
+  <div>
+    <img
+      height="200"
+      width="150"
+      src="<%= ad.coverImagePath %> "
+      alt="not showing img"
+    />
+  </div>
+  <div class="ad-details-grid">
+    <div class="ad-details-label">Employer:</div>
+    <div><%= ad.owner.name %></div>
+    <div class="ad-details-label">location:</div>
+    <div><%= ad.location %></div>
+    <div class="ad-details-label">number:</div>
+    <div><%= ad.phoneNumber %></div>
+    <div class="ad-details-label">Description:</div>
+    <div><%= ad.description %></div>
+  </div>
+</div>
+
+<div class="ad-details-btn-grid">
+  <a
+    class="btn btn-primary ad-details-button"
+    href="/user/show/<%= ad.owner.id %> "
+    >View Employer</a
+  >
+  <form action="/ad/apply/<%= ad.id %> " method="post">
+    <button class="btn btn-primary ad-details-button" type="submit">
+      apply to jop
+    </button>
+  </form>
+</div>

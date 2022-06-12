@@ -1,0 +1,20 @@
+<% ads.forEach(ad => { %>
+
+<div class="justify">
+  <a style="width: 20%" href="/ad/<%= ad.id %>  ">
+    <img style="height: 230px; width: 190px" src="<%= ad.coverImagePath %> " />
+  </a>
+  <div class="ad-grid-info ad-grid-info-application">
+    <a href="/ad/<%= ad.id %> %> "> <%= ad.task %> </a>
+    <p>Location: &nbsp; <%= ad.location %></p>
+    <p>
+      Employer:<a href="/user/show/<%= ad.owner.id %> ">
+        <%= ad.owner.name %></a
+      >
+    </p>
+    <div class="ad-grid-buttons"></div>
+    <a class="btn btn-primary" href="/ad/<%= ad.id %> ">view</a>
+  </div>
+</div>
+
+<% }) %>

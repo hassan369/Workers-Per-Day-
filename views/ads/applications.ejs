@@ -1,0 +1,26 @@
+<div>
+  <h2>users who applied to this job</h2>
+  <% if(uniqUsers.length === 0){ %>
+  <div>There is no applicants.</div>
+  <% } else{ %><!---->
+  <% uniqUsers.forEach(user => { %>
+
+  <div class="justify">
+    <a style="width: 20%" href="/user/show/<%= user.user.id %>  ">
+      <img
+        style="height: 230px; width: 190px"
+        src="<%= user.user.coverImagePath %> "
+      />
+    </a>
+    <div class="ad-grid-info ad-grid-info-application">
+      <a href="/user/show/<%= user.user.id %> %> "> <%= user.user.name %> </a>
+      <p>Job: &nbsp; <%= user.user.job %></p>
+      <p>from: &nbsp; <%= user.user.placeOfResidence %></p>
+      <div class="ad-grid-buttons"></div>
+      <a class="btn btn-primary" href="/user/show/<%= user.user.id %> ">view</a>
+    </div>
+  </div>
+
+  <%}) %><!---->
+  <% } %>
+</div>

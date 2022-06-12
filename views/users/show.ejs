@@ -1,0 +1,37 @@
+<h2 class="page-header"><%= user.name %></h2>
+
+<div class="ad-details">
+  <div>
+    <img
+      height="200"
+      width="150"
+      src="<%= user.coverImagePath %> "
+      alt="not showing img"
+    />
+  </div>
+  <div class="ad-details-grid">
+    <div class="ad-details-label">Job:</div>
+    <div><%= user.job %></div>
+    <div class="ad-details-label">Yerars Of Experience:</div>
+    <div><%= user.yearsOfExperience %></div>
+    <div class="ad-details-label">Education Degree:</div>
+    <div><%= user.educationDegree %></div>
+    <div class="ad-details-label">Nationality:</div>
+    <div><%= user.nationality %></div>
+    <div class="ad-details-label">Place Of Residence:</div>
+    <div><%= user.placeOfResidence %></div>
+    <div class="ad-details-label">Email:</div>
+    <div><%= user.email %></div>
+    <div class="ad-details-label">Phone Number:</div>
+    <div><%= user.phoneNumber %></div>
+  </div>
+</div>
+<br />
+<br />
+<br />
+<!---->
+<%if(adsByUser.length > 0){ %>
+<h2 class="page-header">ads By Author</h2>
+<%- include('../partials/adgrid', { ads: adsByUser }) %> <% } %>
+<!--later on create another parial and set the way you want the ad look like in user page-->
+<!--there is only to ways the ad will look -->

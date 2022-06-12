@@ -1,0 +1,41 @@
+:root {
+  --nav-title-font-size: 2.5rem;
+  --nav-title-font-weight: bold;
+  --nav-link-font-weight: 300;
+}
+
+/*all header*/
+.header-nav {
+  display: flex;
+  flex-wrap: wrap; /*if no space wrap insted go over edge*/
+  justify-content: space-between;
+  align-items: center; /*this is verticly*/
+  margin-bottom: 5rem;
+}
+
+.header-title {
+  color: var(--color-text-light);
+  text-decoration: none;
+  font-size: var(--nav-title-font-size);
+  font-weight: var(--nav-title-font-weight);
+}
+
+.header-nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.header-nav li {
+  list-style-type: none;
+}
+.header-nav li a {
+  text-decoration: none;
+  color: var(--color-text-light);
+  font-weight: var(--nav-link-font-weight);
+  padding: 15px;
+}
+
+.header-nav li a:hover,
+.header-title:hover {
+  color: white;
+}

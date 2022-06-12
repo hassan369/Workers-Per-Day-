@@ -1,0 +1,45 @@
+<h2 class="page-header"><%= user.name %></h2>
+
+<div class="ad-details">
+  <div>
+    <img
+      height="200"
+      width="150"
+      src="<%= user.coverImagePath %> "
+      alt="not showing img"
+    />
+    <div class="user-details-btn-grid">
+      <form action="/user/logout?_method=DELETE" method="POST">
+        <button class="btn btn-danger" type="submit">log out</button>
+      </form>
+    </div>
+  </div>
+  <div class="ad-details-grid">
+    <div class="ad-details-label">Job:</div>
+    <div><%= user.job %></div>
+    <div class="ad-details-label">Yerars Of Experience:</div>
+    <div><%= user.yearsOfExperience %></div>
+    <div class="ad-details-label">Education Degree:</div>
+    <div><%= user.educationDegree %></div>
+    <div class="ad-details-label">Nationality:</div>
+    <div><%= user.nationality %></div>
+    <div class="ad-details-label">Place Of Residence:</div>
+    <div><%= user.placeOfResidence %></div>
+    <div class="ad-details-label">Email:</div>
+    <div><%= user.email %></div>
+    <div class="ad-details-label">Phone Number:</div>
+    <div><%= user.phoneNumber %></div>
+  </div>
+</div>
+
+<div class="user-details-btn-grid">
+  <div><label>Create New Job Positions</label></div>
+  <div><a class="btn btn-primary" href="/ad/new">add job</a></div>
+</div>
+<br />
+<!---->
+<%if(adsByUser.length > 0){ %>
+<h2 class="page-header">ads By Author</h2>
+<%- include('../partials/adgridLoged', { ads: adsByUser }) %> <% } %>
+<!--later on create another parial and set the way you want the ad look like in user page-->
+<!--there is only to ways the ad will look -->
