@@ -1,1 +1,1 @@
-![Alt text](</public/uploads/READMEimages/acreenshot(130)> 'Optional title')
+![Alt text](</public/uploads/README images/Screenshot (130).png> 'Optional title')
